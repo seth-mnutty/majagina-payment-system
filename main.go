@@ -44,6 +44,18 @@ func main() {
 		r.Post("/businesses", handler.CreateBusiness)
 		r.Get("/businesses/{id}", handler.GetBusiness)
 
+		r.Get("/users", handler.ListUsers)
+		r.Post("/users", handler.CreateUser)
+		r.Get("/users/{id}", handler.GetUser)
+
+		r.Get("/products", handler.ListProducts)
+		r.Post("/products", handler.CreateProduct)
+		r.Get("/products/{id}", handler.GetProduct)
+
+		r.Get("/billings", handler.ListBillings)
+		r.Post("/billings", handler.CreateBilling)
+		r.Get("/billings/{id}", handler.GetBilling)
+
 		r.Get("/transactions", handler.ListTransactions)
 		r.Post("/transactions", handler.CreateTransaction)
 		r.Get("/transactions/{id}", handler.GetTransaction)
